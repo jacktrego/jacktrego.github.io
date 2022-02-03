@@ -108,6 +108,7 @@ content {
     justify-content: center;
     text-decoration: none;
     width: 650px;
+    max-width: 650px
     font-size: 18px;
     text-align: left;
     padding-bottom: 100px;
