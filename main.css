@@ -190,4 +190,12 @@ a:visited {
         margin-bottom: -50px;
         padding-bottom: 50px;
     }
+    
+    nav {
+        width: 0vw;
+    }
+
+    .navigationContain {
+        padding-right: -200px;
+    }
   }
