@@ -166,11 +166,12 @@ a:visited {
 @media only screen and (max-width: 480px) {
     body {
       width: 100%;
+      overflow-x: hidden;
       align-items: left;
     }
 
     .content {
-         width: 100%;
+        width: 100%;
         flex-wrap: wrap;
         margin-right: 12%;
         align-items: left;
