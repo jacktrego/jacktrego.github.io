@@ -162,3 +162,23 @@ a:visited {
 .images img{
     width: 300px;
 }
+
+@media only screen and (max-width: 480px) {
+    body {
+      width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: left;
+    }
+
+    .intro{
+        width: 120%;
+        flex-wrap: wrap;
+        align-items: left;
+    }
+  }
