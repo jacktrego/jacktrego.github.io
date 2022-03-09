@@ -148,20 +148,10 @@ a:visited {
     padding-bottom: 150px;
 }
 
-.images{
-    display: flex;
-    flex-wrap: wrap;
-    direction: row;
-    gap: 10px;
-    margin-bottom: 10px;
-    width: 950px;
-    align-items: center;
-    object-fit: cover;
+li {
+    padding-top: 2px;
 }
 
-.images img{
-    width: 300px;
-}
 
 @media only screen and (max-width: 450px) {
     body {
