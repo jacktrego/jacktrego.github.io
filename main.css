@@ -53,6 +53,9 @@ nav {
     justify-content: space-between;
 }
 
+#current {
+    text-decoration: underline;
+}
 
 main {
     padding: 40px;
