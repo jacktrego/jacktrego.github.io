@@ -18,7 +18,7 @@ body{
 }
 
 #logo {
-    color: #f9813e;
+    color: #123524;
     font-size: 32px;
     position: relative;
     box-shadow: none;
@@ -133,7 +133,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #f9813e;
+    color: #123524;
 }
 
 a:visited {
