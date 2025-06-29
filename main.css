@@ -1,0 +1,213 @@
+html {
+    font-family: 'Chivo', sans-serif;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.navLink {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#logo {
+    color: #FA743E;
+    font-size: 32px;
+    position: relative;
+    box-shadow: none;
+    width: 250px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.navLinkContain{
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigationContain{
+    width: 150%;
+    height: 50px;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 180px;
+    justify-content: space-between;
+}
+
+#current {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px;
+    padding-top: 150px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px !important;
+}
+
+.card {
+    background: #FFFFFF;
+    padding: 140px 40px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.intro{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 14px;
+    width: 500px;
+    text-align: center;
+}
+
+.navLink {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+h3 {
+    font-weight: 1,500;
+    font-size: 20px;
+    margin-bottom: -18px;
+}
+
+.content {
+    background: #FFFFFF;
+    padding: 0px 00px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    max-width: 650px;
+    text-decoration: none;
+    width: 650px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 100px;
+}
+
+.contact {
+    padding: 0px 40px;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 100px;
+}
+
+#aboutPic {
+    width: 250px;
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #FA743E;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+.Pocket{
+    padding-left: 0px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.readinglists{
+    margin-bottom: -1px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.years{
+    width: 500px;
+    padding-bottom: 150px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+li {
+    padding-top: 2px;
+}
+
+
+@media only screen and (max-width: 450px) {
+    body {
+      width: 100%;
+      overflow-x: hidden;
+      align-items: left;
+    }
+
+    .content {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-right: 10%;
+        align-items: left;
+        margin-bottom: 0px;
+    }
+
+    .contact {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-right: 10%;
+        align-items: left;
+        margin-bottom: 0px;
+    }
+    .intro{
+        width: 140%;
+        flex-wrap: wrap;
+        align-items: left;
+    }
+    
+    .years {
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: left;
+        margin-bottom: -50px;
+        padding-bottom: 50px;
+    }
+    
+    nav {
+        width: 0vw;
+    }
+
+    .navigationContain {
+        padding-right: -200px;
+    }
+  }
