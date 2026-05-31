@@ -1,44 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jack Trego</title>
-    <link rel="shortcut icon" type="image/jpg" href="./images/icon 3.ico"/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100&display=swap" rel="stylesheet">
+  <title>Jack Trego — Creative Producer</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./images/icon 3.ico"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <nav>
-        <div class="navigationContain">
-            <a href="../index.html"><p id="logo">Jack Trego</p></a>
-            <div class="navLinkContain">
-              <a href="../pages/writing.html" class="navLink">WRITING</a>
-              <a href="../pages/reading.html" class="navLink">READING</a>
-              <a href="../pages/about.html" class="navLink">ABOUT</a>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class="card">
-            <p class="intro">
-                 I am a homepage — 
-                <br>
-                <br>a landing spot for pure creativity,
-                <br>the hub of my mental alchemy,
-                <br>the divine location of my Thought™ , 
-                <br>the fruitful production of my fruitless endeavors, 
-                <br>
-                <br>O ! My heart burns for my restless mind — 
-                <br>               
-                <br>Or I'm just a page with some links on it
-            </p>
-        </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Hover images -->
+  <div class="hover-image" id="hover-batch">
+    <video autoplay muted loop playsinline>
+      <source src="./images/batch/00.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hover-image" id="hover-tof">
+    <img src="./images/tof/02_TOF_Website_16x9.jpg" alt="Type of Feeling">
+  </div>
+  <div class="hover-image" id="hover-woc">
+    <img src="./images/woc/01_WOC.gif" alt="World Ocean Celebration">
+  </div>
+
+  <div class="site">
+
+    <!-- Top left: identity -->
+    <header class="site-header">
+      <a href="./index.html">
+        <p class="site-title">Jack Trego<br>Creative Producer</p>
+      </a>
+    </header>
+
+    <!-- Center: client list -->
+    <main class="site-main">
+      <ul class="client-list">
+        <li>
+          <a href="./pages/batch.html"
+             data-hover="hover-batch"
+             class="project-link">Batch</a>
+        </li>
+        <li>
+          <a href="./pages/tof.html"
+             data-hover="hover-tof"
+             class="project-link">Type of Feeling</a>
+        </li>
+        <li>
+          <a href="./pages/woc.html"
+             data-hover="hover-woc"
+             class="project-link">World Ocean Celebration</a>
+        </li>
+        <li class="request">
+          <a href="mailto:jackctrego@gmail.com">Full client list available upon request</a>
+        </li>
+      </ul>
     </main>
+
+    <!-- Bottom left: nav -->
+    <footer class="site-footer">
+      <a href="./pages/about.html">About</a>
+      <a href="mailto:jackctrego@gmail.com">Contact</a>
+    </footer>
+
+  </div>
+
+  <script>
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Hover images follow cursor
+    const hoverImages = document.querySelectorAll('.hover-image');
+    const projectLinks = document.querySelectorAll('.project-link');
+
+    document.addEventListener('mousemove', e => {
+      hoverImages.forEach(img => {
+        img.style.left = e.clientX + 'px';
+        img.style.top = e.clientY + 'px';
+      });
+    });
+
+    projectLinks.forEach(link => {
+      const targetId = link.dataset.hover;
+      const img = document.getElementById(targetId);
+
+      link.addEventListener('mouseenter', () => {
+        img.classList.add('visible');
+        cursor.classList.add('hovering');
+      });
+
+      link.addEventListener('mouseleave', () => {
+        img.classList.remove('visible');
+        cursor.classList.remove('hovering');
+      });
+    });
+
+    // Footer links cursor state
+    document.querySelectorAll('a').forEach(a => {
+      a.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+      a.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+  </script>
+
 </body>
-    
 </html>

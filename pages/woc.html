@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jack Trego — World Ocean Celebration</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/icon 3.ico"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <div class="project-site">
+
+    <header class="project-header">
+      <a href="../index.html" class="project-back">Jack Trego — Creative Producer</a>
+    </header>
+
+    <footer class="project-footer">
+      <a href="./about.html">About</a>
+      <a href="mailto:jackctrego@gmail.com">Contact</a>
+    </footer>
+
+    <div class="project-content">
+
+      <div class="project-asset">
+        <img src="../images/woc/01_WOC.gif" alt="World Ocean Celebration">
+      </div>
+
+      <div class="project-info">
+        <div class="project-description">
+          <p>A full-scale branding project for World Ocean Celebration, designed to create a lasting visual identity for an event that blends conservation, art, science, and activism. From logo design to a flexible design system, we developed an identity that could evolve with the organization—spanning everything from pitch decks to event signage, social media, and future activations. Our work helped World Ocean Celebration Miami to mount a successful sponsorship campaign between 2024 and 2025, allowing them to expand from a single day event to a weeklong celebration.</p>
+        </div>
+        <div class="project-credits">
+          <div class="credit-row"><span class="credit-label">Client</span><span class="credit-value"><a href="https://www.worldoceancelebration.miami/" target="_blank">ARTSail + Blue Scholars Initiative</a></span></div>
+          <div class="credit-row"><span class="credit-label">Art Director</span><span class="credit-value">Maria Useche</span></div>
+          <div class="credit-row"><span class="credit-label">Year</span><span class="credit-value">2025</span></div>
+        </div>
+      </div>
+
+      <div class="project-asset"><img src="../images/woc/02_WOC.png" alt="World Ocean Celebration 02"></div>
+      <div class="project-asset"><img src="../images/woc/03_WOC.png" alt="World Ocean Celebration 03"></div>
+      <div class="project-asset"><img src="../images/woc/04_WOC.gif" alt="World Ocean Celebration 04"></div>
+      <div class="project-asset"><img src="../images/woc/05_WOC.jpg" alt="World Ocean Celebration 05"></div>
+
+    </div>
+  </div>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+    document.querySelectorAll('a').forEach(a => {
+      a.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+      a.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+  </script>
+
+</body>
+</html>
