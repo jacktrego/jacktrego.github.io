@@ -14,8 +14,11 @@
 
   <div class="project-site">
 
-    <header class="project-header">
-      <a href="../index.html" class="project-back">Jack Trego — Creative Producer</a>
+    <header class="project-header" id="project-header">
+      <a href="../index.html">
+        <p class="project-header-name">Jack Trego</p>
+        <p class="project-header-role">Creative Producer</p>
+      </a>
     </header>
 
     <footer class="project-footer">
@@ -26,8 +29,7 @@
     <div class="about-content">
       <h1>About</h1>
       <div class="about-body">
-        <p>Jack Trego is a Creative Producer based in New York City, working at the intersection of brand, design, and production. He is currently at <a href="https://andwalsh.com" target="_blank">&Walsh</a>, where he manages full rebrands, packaging, campaigns, typeface development, and TVC productions.</p>
-        <p>He also manages <a href="https://typeoffeeling.com" target="_blank">Type of Feeling</a>, a type foundry creating fonts inspired by obscure and untranslatable feelings.</p>
+        <p>Jack Trego is a Creative Producer based in New York City, working at the intersection of brand, design, and production. He is currently at <a href="https://andwalsh.com" target="_blank">&Walsh</a>, where he manages rebrands, packaging projects, campaigns, and productions. He also manages <a href="https://typeoffeeling.com" target="_blank">Type of Feeling</a>, a type foundry creating fonts inspired by obscure and untranslatable feelings.</p>
       </div>
       <div class="about-links">
         <a href="mailto:jackctrego@gmail.com">jackctrego@gmail.com</a>
@@ -48,6 +50,16 @@
     document.querySelectorAll('a').forEach(a => {
       a.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
       a.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+
+    // Fade header on scroll
+    const header = document.getElementById('project-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
     });
   </script>
 

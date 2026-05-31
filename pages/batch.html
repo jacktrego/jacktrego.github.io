@@ -14,8 +14,11 @@
 
   <div class="project-site">
 
-    <header class="project-header">
-      <a href="../index.html" class="project-back">Jack Trego — Creative Producer</a>
+    <header class="project-header" id="project-header">
+      <a href="../index.html">
+        <p class="project-header-name">Jack Trego</p>
+        <p class="project-header-role">Creative Producer</p>
+      </a>
     </header>
 
     <footer class="project-footer">
@@ -24,12 +27,6 @@
     </footer>
 
     <div class="project-content">
-
-      <div class="project-asset">
-        <video autoplay muted loop playsinline>
-          <source src="../images/batch/00.mp4" type="video/mp4">
-        </video>
-      </div>
 
       <div class="project-asset">
         <video autoplay muted loop playsinline>
@@ -51,6 +48,12 @@
           <div class="credit-row"><span class="credit-label">Design</span><span class="credit-value">Julia Miceli Pitta, Sasyk Mihal, Juanse Carvajal, Lucas Luz, Matthew Roop</span></div>
           <div class="credit-row"><span class="credit-label">Video & Animations</span><span class="credit-value">Igor Fajardo, Matthew Roop, Julio Zukerman, Daniel Zepeda</span></div>
         </div>
+      </div>
+
+         <div class="project-asset">
+        <video autoplay muted loop playsinline>
+          <source src="../images/batch/00.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="project-asset">
@@ -139,6 +142,16 @@
     document.querySelectorAll('a').forEach(a => {
       a.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
       a.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+
+    // Fade header on scroll
+    const header = document.getElementById('project-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
     });
   </script>
 
