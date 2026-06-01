@@ -25,6 +25,11 @@
   <div class="hover-image" id="hover-woc">
     <img src="./images/woc/01_WOC.gif" alt="World Ocean Celebration">
   </div>
+  <div class="hover-image" id="hover-isodope">
+    <video autoplay muted loop playsinline>
+      <source src="./images/isodope/Rad Future_01.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <div class="site">
 
@@ -48,6 +53,11 @@
           <a href="./pages/tof.html"
              data-hover="hover-tof"
              class="project-link">Type of Feeling</a>
+        </li>
+        <li>
+          <a href="./pages/isodope.html"
+             data-hover="hover-isodope"
+             class="project-link">Isodope Rad Future</a>
         </li>
         <li>
           <a href="./pages/woc.html"
@@ -78,20 +88,22 @@
       cursor.style.top = e.clientY + 'px';
     });
 
-    // Hover images follow cursor
+    // Hover images follow cursor via transform
     const hoverImages = document.querySelectorAll('.hover-image');
     const projectLinks = document.querySelectorAll('.project-link');
 
     document.addEventListener('mousemove', e => {
+      const x = e.clientX;
+      const y = e.clientY;
       hoverImages.forEach(img => {
-        img.style.left = e.clientX + 'px';
-        img.style.top = e.clientY + 'px';
+        img.style.transform = `translate(${x - 170}px, ${y - img.offsetHeight - 16}px)`;
       });
     });
 
     projectLinks.forEach(link => {
       const targetId = link.dataset.hover;
       const img = document.getElementById(targetId);
+      if (!img) return;
 
       link.addEventListener('mouseenter', () => {
         img.classList.add('visible');
